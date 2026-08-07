@@ -1,241 +1,281 @@
+<!DOCTYPE html>
 <!-- ============================================================
      Danny Gregory — single-page site
+
      HOSTING (GitHub Pages):
-       1. Upload THREE files to the root of your repo:
-            - index.html  (this file)
-            - dog-signature-header.jpg  (the header signature)
-            - MIA.jpg  (the book cover)
-       2. Settings > Pages > Deploy from branch > main > / (root).
-       3. Settings > Pages > Custom domain > dannygregory.com.
-       4. Add the DNS records, tick Enforce HTTPS, done.
-     OPTIONAL: there's a video slot in the hero marked VIDEO-SLOT —
-       paste a YouTube/Vimeo embed URL or delete that block.
+     1. Files in the root of the repo:
+          - index.html (this file)
+          - dog-signature-header.jpg  (header signature)
+          - MIA.jpg                   (Make It Anyway cover)
+          - UNPUB.jpg                 (Unpublishable cover — ADD THIS)
+     2. Settings > Pages > Deploy from branch > main > / (root).
+     3. Settings > Pages > Custom domain > dannygregory.com.
+     4. DNS records, tick Enforce HTTPS, done.
+
+     Save the Unpublishable cover as UNPUB.jpg in the repo root, or
+     change the src on the second book block to match your filename.
      ============================================================ -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Danny Gregory — Author, Artist, Creativity Coach</title>
+<meta name="description" content="Danny Gregory helps people unlock their creativity through drawing. 15 bestselling books, 500,000+ YouTube subscribers, founder of Sketchbook Skool.">
+<meta property="og:title" content="Danny Gregory">
+<meta property="og:description" content="I help people unlock their creativity through drawing.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://dannygregory.com">
 
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&display=swap');
 
-  :root{
-    --paper:#FBF8F1;
-    --paper-2:#F4EFE3;
-    --ink:#1E2A38;
-    --ink-soft:#53606C;
-    --wash:#2C7A8C;
-    --wash-fill:rgba(44,122,140,.10);
-    --rule:#E7E0CF;
-    --maxw:760px;
-  }
+:root{
+  --paper:#FBF8F1;
+  --paper-2:#F4EFE3;
+  --ink:#1E2A38;
+  --ink-soft:#53606C;
+  --wash:#2C7A8C;
+  --wash-fill:rgba(44,122,140,.10);
+  --rule:#E7E0CF;
+  --maxw:760px;
+}
+*{box-sizing:border-box;}
 
-  *{box-sizing:border-box;}
+.dg-site{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  font-size:18px;
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+  margin:0;
+  padding:0 24px 72px;
+}
+.dg-wrap{max-width:var(--maxw);margin:0 auto;}
 
-  .dg-site{
-    background:var(--paper);
-    color:var(--ink);
-    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-    font-size:18px;
-    line-height:1.65;
-    -webkit-font-smoothing:antialiased;
-    margin:0;
-    padding:0 24px 72px;
-  }
-  .dg-wrap{max-width:var(--maxw);margin:0 auto;}
+.dg-site h1,.dg-site h2,.dg-site h3{
+  font-family:"Newsreader",Georgia,serif;
+  font-weight:500;
+  line-height:1.15;
+  letter-spacing:-.01em;
+  margin:0;
+}
 
-  .dg-site h1,.dg-site h2,.dg-site h3{
-    font-family:"Newsreader",Georgia,serif;
-    font-weight:500;
-    line-height:1.15;
-    letter-spacing:-.01em;
-    margin:0;
-  }
+/* hand-drawn underline signature element */
+.dg-stroke{display:block;width:120px;height:14px;margin:14px 0 0;color:var(--wash);}
+.dg-stroke path{fill:none;stroke:currentColor;stroke-width:3;stroke-linecap:round;}
 
-  /* hand-drawn underline signature element */
-  .dg-stroke{display:block;width:120px;height:14px;margin:14px 0 0;color:var(--wash);}
-  .dg-stroke path{fill:none;stroke:currentColor;stroke-width:3;stroke-linecap:round;}
+/* ---------- HERO ---------- */
+.dg-hero{padding:64px 0 12px;text-align:center;}
+.dg-eyebrow{
+  font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--wash);font-weight:600;margin:0 0 28px;
+}
+.dg-mark{max-width:340px;width:80%;height:auto;margin:0 auto;display:block;}
+.dg-h1-hidden{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);}
+.dg-lede{
+  font-family:"Newsreader",Georgia,serif;
+  font-size:1.7rem;font-style:italic;line-height:1.3;
+  margin:30px auto 6px;max-width:540px;
+}
+.dg-creds{color:var(--ink-soft);font-size:1rem;max-width:520px;margin:0 auto;}
 
-  /* ---------- HERO ---------- */
-  .dg-hero{padding:64px 0 12px;text-align:center;}
-  .dg-eyebrow{
-    font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;
-    color:var(--wash);font-weight:600;margin:0 0 28px;
-  }
-  .dg-mark{max-width:340px;width:80%;height:auto;margin:0 auto;display:block;}
-  .dg-h1-hidden{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);}
-  .dg-lede{
-    font-family:"Newsreader",Georgia,serif;
-    font-size:1.7rem;font-style:italic;line-height:1.3;
-    margin:30px auto 6px;max-width:540px;
-  }
-  .dg-creds{color:var(--ink-soft);font-size:1rem;max-width:520px;margin:0 auto;}
+/* video slot */
+.dg-video{margin:34px auto 0;max-width:600px;}
+.dg-video .frame{
+  position:relative;padding-bottom:56.25%;height:0;overflow:hidden;
+  border-radius:6px;background:var(--paper-2);
+}
+.dg-video iframe{position:absolute;inset:0;width:100%;height:100%;border:0;}
 
-  /* video slot */
-  .dg-video{margin:34px auto 0;max-width:600px;}
-  .dg-video .frame{
-    position:relative;padding-bottom:56.25%;height:0;overflow:hidden;
-    border-radius:6px;background:var(--paper-2);
-  }
-  .dg-video iframe{position:absolute;inset:0;width:100%;height:100%;border:0;}
+/* ---------- LINK ROW ---------- */
+.dg-links{
+  display:flex;flex-wrap:wrap;gap:12px;justify-content:center;
+  margin:38px 0 8px;
+}
+.dg-links a{
+  text-decoration:none;color:var(--ink);
+  border:1.5px solid var(--ink);border-radius:2px;
+  padding:11px 22px;font-size:.92rem;font-weight:600;
+  letter-spacing:.02em;transition:background .15s ease,color .15s ease;
+}
+.dg-links a:hover{background:var(--ink);color:var(--paper);}
 
-  /* ---------- LINK ROW ---------- */
-  .dg-links{
-    display:flex;flex-wrap:wrap;gap:12px;justify-content:center;
-    margin:38px 0 8px;
-  }
-  .dg-links a{
-    text-decoration:none;color:var(--ink);
-    border:1.5px solid var(--ink);border-radius:2px;
-    padding:11px 22px;font-size:.92rem;font-weight:600;
-    letter-spacing:.02em;transition:background .15s ease,color .15s ease;
-  }
-  .dg-links a:hover{background:var(--ink);color:var(--paper);}
+/* ---------- DIVIDER ---------- */
+.dg-div{border:0;border-top:1px solid var(--rule);margin:60px 0;}
+.dg-div-tight{border:0;border-top:1px solid var(--rule);margin:40px 0;}
 
-  /* ---------- DIVIDER ---------- */
-  .dg-div{border:0;border-top:1px solid var(--rule);margin:60px 0;}
+/* ---------- BOOK ---------- */
+.dg-book{display:flex;gap:38px;align-items:flex-start;flex-wrap:wrap;}
+.dg-book img{width:230px;max-width:100%;height:auto;border-radius:3px;box-shadow:0 12px 30px rgba(30,42,56,.14);}
+.dg-book .body{flex:1;min-width:260px;}
+.dg-kicker{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--wash);font-weight:600;margin:0 0 10px;}
+.dg-book h2{font-size:1.9rem;margin-bottom:14px;}
+.dg-book p{color:var(--ink-soft);margin:0 0 22px;}
+.dg-cta{display:flex;gap:14px;flex-wrap:wrap;align-items:center;}
 
-  /* ---------- BOOK ---------- */
-  .dg-book{display:flex;gap:38px;align-items:flex-start;flex-wrap:wrap;}
-  .dg-book img{width:230px;max-width:100%;height:auto;border-radius:3px;box-shadow:0 12px 30px rgba(30,42,56,.14);}
-  .dg-book .body{flex:1;min-width:260px;}
-  .dg-kicker{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--wash);font-weight:600;margin:0 0 10px;}
-  .dg-book h2{font-size:1.9rem;margin-bottom:14px;}
-  .dg-book p{color:var(--ink-soft);margin:0 0 22px;}
-  .dg-cta{display:flex;gap:14px;flex-wrap:wrap;align-items:center;}
-  .dg-btn-solid{
-    background:var(--wash);color:#fff;text-decoration:none;
-    padding:11px 24px;border-radius:2px;font-weight:600;font-size:.92rem;
-    transition:opacity .15s ease;
-  }
-  .dg-btn-solid:hover{opacity:.88;}
-  .dg-btn-text{color:var(--ink);text-decoration:none;font-weight:600;font-size:.92rem;border-bottom:1.5px solid var(--wash);padding-bottom:1px;}
+/* secondary book — same anatomy, quieter */
+.dg-book--second{gap:28px;}
+.dg-book--second img{width:150px;}
+.dg-book--second .body{min-width:240px;}
+.dg-book--second h2{font-size:1.45rem;margin-bottom:10px;}
+.dg-book--second p{font-size:.96rem;margin-bottom:18px;}
 
-  /* ---------- STATS ---------- */
-  .dg-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center;}
-  .dg-stat .num{font-family:"Newsreader",Georgia,serif;font-size:2rem;font-weight:500;color:var(--ink);display:block;}
-  .dg-stat .lbl{font-size:.8rem;color:var(--ink-soft);letter-spacing:.03em;}
+.dg-btn-solid{
+  background:var(--wash);color:#fff;text-decoration:none;
+  padding:11px 24px;border-radius:2px;font-weight:600;font-size:.92rem;
+  transition:opacity .15s ease;
+}
+.dg-btn-solid:hover{opacity:.88;}
+.dg-btn-text{color:var(--ink);text-decoration:none;font-weight:600;font-size:.92rem;border-bottom:1.5px solid var(--wash);padding-bottom:1px;}
 
-  /* ---------- BIO ---------- */
-  .dg-bio h2{font-size:1.6rem;text-align:center;margin-bottom:8px;}
-  .dg-bio .dg-stroke{margin:0 auto 30px;}
-  details.dg-toggle{border-top:1px solid var(--rule);}
-  details.dg-toggle:last-of-type{border-bottom:1px solid var(--rule);}
-  details.dg-toggle summary{
-    cursor:pointer;list-style:none;padding:18px 4px;
-    font-family:"Newsreader",Georgia,serif;font-size:1.2rem;
-    display:flex;justify-content:space-between;align-items:center;
-  }
-  details.dg-toggle summary::-webkit-details-marker{display:none;}
-  details.dg-toggle summary::after{content:"+";color:var(--wash);font-size:1.4rem;font-family:-apple-system,sans-serif;}
-  details.dg-toggle[open] summary::after{content:"–";}
-  details.dg-toggle .reveal{padding:0 4px 22px;color:var(--ink-soft);font-size:1rem;}
-  details.dg-toggle a{color:var(--wash);}
+/* ---------- STATS ---------- */
+.dg-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center;}
+.dg-stat .num{font-family:"Newsreader",Georgia,serif;font-size:2rem;font-weight:500;color:var(--ink);display:block;}
+.dg-stat .lbl{font-size:.8rem;color:var(--ink-soft);letter-spacing:.03em;}
 
-  /* ---------- CONTACT / FOOTER ---------- */
-  .dg-contact{text-align:center;}
-  .dg-contact h2{font-size:1.5rem;margin-bottom:10px;}
-  .dg-contact p{color:var(--ink-soft);margin:0 0 6px;}
-  .dg-contact a{color:var(--ink);font-weight:600;text-decoration:none;border-bottom:1.5px solid var(--wash);}
-  .dg-foot{text-align:center;color:var(--ink-soft);font-size:.82rem;margin-top:46px;}
+/* ---------- BIO ---------- */
+.dg-bio h2{font-size:1.6rem;text-align:center;margin-bottom:8px;}
+.dg-bio .dg-stroke{margin:0 auto 30px;}
+details.dg-toggle{border-top:1px solid var(--rule);}
+details.dg-toggle:last-of-type{border-bottom:1px solid var(--rule);}
+details.dg-toggle summary{
+  cursor:pointer;list-style:none;padding:18px 4px;
+  font-family:"Newsreader",Georgia,serif;font-size:1.2rem;
+  display:flex;justify-content:space-between;align-items:center;
+}
+details.dg-toggle summary::-webkit-details-marker{display:none;}
+details.dg-toggle summary::after{content:"+";color:var(--wash);font-size:1.4rem;font-family:-apple-system,sans-serif;}
+details.dg-toggle[open] summary::after{content:"–";}
+details.dg-toggle .reveal{padding:0 4px 22px;color:var(--ink-soft);font-size:1rem;}
+details.dg-toggle a{color:var(--wash);}
 
-  /* ---------- RESPONSIVE ---------- */
-  @media (max-width:560px){
-    .dg-site{font-size:17px;}
-    .dg-lede{font-size:1.4rem;}
-    .dg-book{justify-content:center;text-align:center;}
-    .dg-book img{margin:0 auto;}
-    .dg-cta{justify-content:center;}
-    .dg-stats{grid-template-columns:repeat(2,1fr);gap:28px 20px;}
-  }
+/* ---------- CONTACT / FOOTER ---------- */
+.dg-contact{text-align:center;}
+.dg-contact h2{font-size:1.5rem;margin-bottom:10px;}
+.dg-contact p{color:var(--ink-soft);margin:0 0 6px;}
+.dg-contact a{color:var(--ink);font-weight:600;text-decoration:none;border-bottom:1.5px solid var(--wash);}
+.dg-foot{text-align:center;color:var(--ink-soft);font-size:.82rem;margin-top:46px;}
 
-  /* load animation, gentle, opt-out for reduced motion */
-  @media (prefers-reduced-motion:no-preference){
-    .dg-fade{opacity:0;transform:translateY(10px);animation:dgUp .7s ease forwards;}
-    @keyframes dgUp{to{opacity:1;transform:none;}}
-  }
-  :focus-visible{outline:2px solid var(--wash);outline-offset:3px;}
+/* ---------- RESPONSIVE ---------- */
+@media (max-width:560px){
+  .dg-site{font-size:17px;}
+  .dg-lede{font-size:1.4rem;}
+  .dg-book{justify-content:center;text-align:center;}
+  .dg-book img{margin:0 auto;}
+  .dg-cta{justify-content:center;}
+  .dg-stats{grid-template-columns:repeat(2,1fr);gap:28px 20px;}
+}
+
+/* load animation, gentle, opt-out for reduced motion */
+@media (prefers-reduced-motion:no-preference){
+  .dg-fade{opacity:0;transform:translateY(10px);animation:dgUp .7s ease forwards;}
+  @keyframes dgUp{to{opacity:1;transform:none;}}
+}
+:focus-visible{outline:2px solid var(--wash);outline-offset:3px;}
 </style>
+</head>
+<body>
 
 <div class="dg-site">
-  <div class="dg-wrap">
+<div class="dg-wrap">
 
-    <!-- ===================== HERO ===================== -->
-    <header class="dg-hero dg-fade">
-      <p class="dg-eyebrow">Author · Artist · Creativity Coach</p>
+  <!-- ===================== HERO ===================== -->
+  <header class="dg-hero dg-fade">
+    <p class="dg-eyebrow">Author &middot; Artist &middot; Creativity Coach</p>
+    <img class="dg-mark" src="dog-signature-header.jpg" alt="Danny Gregory">
+    <h1 class="dg-h1-hidden">Danny Gregory</h1>
+    <p class="dg-lede">I help people unlock their creativity through drawing.</p>
+    <p class="dg-creds">15 bestselling books. 500,000+ YouTube subscribers. Founder of Sketchbook Skool.</p>
 
-      <img class="dg-mark" src="dog-signature-header.jpg" alt="Danny Gregory">
-      <h1 class="dg-h1-hidden">Danny Gregory</h1>
+    <div class="dg-video">
+      <div class="frame"><iframe src="https://player.vimeo.com/video/1200923374" title="Meet Danny" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+    </div>
 
-      <p class="dg-lede">I help people unlock their creativity through drawing.</p>
-      <p class="dg-creds">14 bestselling books. 500,000+ YouTube subscribers. Founder of Sketchbook Skool.</p>
+    <nav class="dg-links">
+      <a href="https://www.youtube.com/@SketchBookSkool">YouTube</a>
+      <a href="https://www.dannysessays.com/">Newsletter</a>
+      <a href="https://www.amazon.com/stores/author/B001JP28SW/allbooks">Books</a>
+      <a href="https://sketchbookskool.com">Courses</a>
+    </nav>
+  </header>
 
-      <div class="dg-video">
-        <div class="frame"><iframe src="https://player.vimeo.com/video/1200923374" title="Meet Danny" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+  <hr class="dg-div">
+
+  <!-- ===================== LATEST BOOK ===================== -->
+  <section class="dg-book">
+    <img src="MIA.jpg" alt="Make It Anyway book cover">
+    <div class="body">
+      <p class="dg-kicker">Latest book</p>
+      <h2>Make It Anyway</h2>
+      <p>More essays on creative living. What if you stopped waiting for perfect &mdash; and made something anyway? A frank, encouraging look at the creative process and what gets in its way. Essays from a life spent drawing, writing, and teaching others to make art without fear, doubt, or perfectionism holding them back. Quiet the critic, embrace imperfection, and make it &mdash; anyway.</p>
+      <div class="dg-cta">
+        <a class="dg-btn-solid" href="https://amzn.to/4pWsj20">Buy on Amazon</a>
+        <a class="dg-btn-text" href="https://www.amazon.com/stores/author/B001JP28SW/allbooks">See all my books</a>
       </div>
+    </div>
+  </section>
 
-      <nav class="dg-links">
-        <a href="https://www.youtube.com/@SketchBookSkool">YouTube</a>
-        <a href="https://www.dannysessays.com/">Newsletter</a>
-        <a href="https://www.amazon.com/stores/author/B001JP28SW/allbooks">Books</a>
-        <a href="https://sketchbookskool.com">Courses</a>
-      </nav>
-    </header>
+  <hr class="dg-div-tight">
 
-    <hr class="dg-div">
-
-    <!-- ===================== NEW BOOK ===================== -->
-    <section class="dg-book">
-      <img src="MIA.jpg" alt="Make It Anyway book cover">
-      <div class="body">
-        <p class="dg-kicker">My new book</p>
-        <h2>Make It Anyway</h2>
-        <p>More essays on creative living. What if you stopped waiting for perfect — and made something anyway? A frank, encouraging look at the creative process and what gets in its way. Essays from a life spent drawing, writing, and teaching others to make art without fear, doubt, or perfectionism holding them back. Quiet the critic, embrace imperfection, and make it — anyway.</p>
-        <div class="dg-cta">
-          <a class="dg-btn-solid" href="https://amzn.to/4pWsj20">Buy on Amazon</a>
-          <a class="dg-btn-text" href="https://www.amazon.com/stores/author/B001JP28SW/allbooks">See all my books</a>
-        </div>
+  <!-- ===================== ALSO OUT ===================== -->
+  <section class="dg-book dg-book--second">
+    <img src="UNPUB.jpg" alt="Unpublishable: Stories 1971&ndash;86 book cover">
+    <div class="body">
+      <p class="dg-kicker">Also out</p>
+      <h2>Unpublishable: Stories (1971&ndash;86)</h2>
+      <p>I used to dream of being a published fiction writer and wrote dozens of stories &mdash; but they were never published and I dumped them all in a cardboard box. Forty years later, I made that dream come true by publishing this collection of unpublishable stories. The result: funny, strange, sometimes devastating &mdash; and proof that a promise to your younger self is worth keeping.</p>
+      <div class="dg-cta">
+        <a class="dg-btn-solid" href="https://amzn.to/4fH5nkW">Buy on Amazon</a>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <hr class="dg-div">
+  <hr class="dg-div">
 
-    <!-- ===================== STATS ===================== -->
-    <section class="dg-stats">
-      <div class="dg-stat"><span class="num">30K+</span><span class="lbl">Newsletter readers</span></div>
-      <div class="dg-stat"><span class="num">50K+</span><span class="lbl">Students worldwide</span></div>
-      <div class="dg-stat"><span class="num">14</span><span class="lbl">Published books</span></div>
-      <div class="dg-stat"><span class="num">500K+</span><span class="lbl">YouTube subscribers</span></div>
-    </section>
+  <!-- ===================== STATS ===================== -->
+  <section class="dg-stats">
+    <div class="dg-stat"><span class="num">30K+</span><span class="lbl">Newsletter readers</span></div>
+    <div class="dg-stat"><span class="num">50K+</span><span class="lbl">Students worldwide</span></div>
+    <div class="dg-stat"><span class="num">15</span><span class="lbl">Published books</span></div>
+    <div class="dg-stat"><span class="num">500K+</span><span class="lbl">YouTube subscribers</span></div>
+  </section>
 
-    <hr class="dg-div">
+  <hr class="dg-div">
 
-    <!-- ===================== BIO ===================== -->
-    <section class="dg-bio">
-      <h2>Danny’s bio</h2>
-      <svg class="dg-stroke" viewBox="0 0 120 14" aria-hidden="true"><path d="M3 9 C 25 3, 45 12, 64 6 S 100 4, 117 8"/></svg>
+  <!-- ===================== BIO ===================== -->
+  <section class="dg-bio">
+    <h2>Danny&rsquo;s bio</h2>
+    <svg class="dg-stroke" viewBox="0 0 120 14" aria-hidden="true"><path d="M3 9 C 25 3, 45 12, 64 6 S 100 4, 117 8"/></svg>
 
-      <details class="dg-toggle">
-        <summary>In brief</summary>
-        <div class="reveal">Bestselling author of 14 books on creativity and drawing. Founder of <a href="https://sketchbookskool.com">SketchbookSkool.com</a>. 500K+ YouTube subscribers. Former Executive Creative Director. Phoenix, AZ.</div>
-      </details>
+    <details class="dg-toggle">
+      <summary>In brief</summary>
+      <div class="reveal">Bestselling author of 15 books on creativity and drawing. Founder of <a href="https://sketchbookskool.com">SketchbookSkool.com</a>. 500K+ YouTube subscribers. Former Executive Creative Director. Phoenix, AZ.</div>
+    </details>
 
-      <details class="dg-toggle">
-        <summary>In detail</summary>
-        <div class="reveal">Danny Gregory is an internationally bestselling author of 14 books on art and creativity. As founder of  <a href="https://sketchbookskool.com">Sketchbook Skool</a>, he has inspired 50,000+ students worldwide to discover their artistic abilities. His <a href="https://www.youtube.com/channel/UCnwAvNKzdoFgRyvXEBJBv0Q">YouTube channel</a> features video essays and drawing lessons that reach over 500,000 subscribers. He publishes weekly essays to 30,000+ readers at <a href="https://www.dannysessays.com/">dannysessays.com</a>. Danny spent three decades as one of New York’s leading advertising creative directors, creating award-winning global campaigns. He was born in London, grew up in Pakistan, Australia, Israel, and New York City, and graduated summa cum laude from Princeton University. He now lives in Phoenix, AZ.</div>
-      </details>
+    <details class="dg-toggle">
+      <summary>In detail</summary>
+      <div class="reveal">Danny Gregory is an internationally bestselling author of 15 books on art and creativity. As founder of <a href="https://sketchbookskool.com">Sketchbook Skool</a>, he has inspired 50,000+ students worldwide to discover their artistic abilities. His <a href="https://www.youtube.com/channel/UCnwAvNKzdoFgRyvXEBJBv0Q">YouTube channel</a> features video essays and drawing lessons that reach over 500,000 subscribers. He publishes weekly essays to 30,000+ readers at <a href="https://www.dannysessays.com/">dannysessays.com</a>. Danny spent three decades as one of New York&rsquo;s leading advertising creative directors, creating award-winning global campaigns. He was born in London, grew up in Pakistan, Australia, Israel, and New York City, and graduated summa cum laude from Princeton University. He now lives in Phoenix, AZ.</div>
+    </details>
 
-      <details class="dg-toggle">
-        <summary>Press photos</summary>
-        <div class="reveal">High-resolution images for media use: <a href="https://drive.google.com/file/d/19JW2bx38nCgIb3XHSf-xXO6LsKq4h8yO/view?usp=sharing">download the .zip folder</a>.</div>
-      </details>
-    </section>
+    <details class="dg-toggle">
+      <summary>Press photos</summary>
+      <div class="reveal">High-resolution images for media use: <a href="https://drive.google.com/file/d/19JW2bx38nCgIb3XHSf-xXO6LsKq4h8yO/view?usp=sharing">download the .zip folder</a>.</div>
+    </details>
+  </section>
 
-    <hr class="dg-div">
+  <hr class="dg-div">
 
-    <!-- ===================== CONTACT ===================== -->
-    <section class="dg-contact">
-      <h2>Get in touch</h2>
-      <p>Speaking engagements and media inquiries:</p>
-      <p><a href="mailto:Info+dog@DannyGregory.com">Info@DannyGregory.com</a></p>
-      <p class="dg-foot">© Danny Gregory</p>
-    </section>
+  <!-- ===================== CONTACT ===================== -->
+  <section class="dg-contact">
+    <h2>Get in touch</h2>
+    <p>Speaking engagements and media inquiries:</p>
+    <p><a href="mailto:Info+dog@DannyGregory.com">Info@DannyGregory.com</a></p>
+    <p class="dg-foot">&copy; Danny Gregory</p>
+  </section>
 
-  </div>
 </div>
+</div>
+
+</body>
+</html>
